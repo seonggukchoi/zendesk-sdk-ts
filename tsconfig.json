@@ -24,5 +24,5 @@
     "experimentalDecorators": true,        /* Enables experimental support for ES7 decorators. */
     "strictPropertyInitialization": false
   },
-  "exclude": ["./tests/*"]
+  "exclude": ["src/tests/*"]
 }

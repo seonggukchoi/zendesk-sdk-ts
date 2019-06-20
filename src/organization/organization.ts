@@ -1,4 +1,4 @@
-import ZendeskAPI from '../zendesk-api';
+import ZendeskAPI from '../zendesk-request';
 
 export default class OrganizationAPI extends ZendeskAPI {
   public async create(organization: Zendesk.Types.Organization) {

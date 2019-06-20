@@ -1,4 +1,4 @@
-import ZendeskAPI from '../zendesk-api';
+import ZendeskAPI from '../zendesk-request';
 
 export default class OrganizationMembershipAPI extends ZendeskAPI {
   public async create(organization_membership: Zendesk.Types.OrganizationMembership) {

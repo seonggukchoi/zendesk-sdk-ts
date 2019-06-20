@@ -1,4 +1,4 @@
-import ZendeskAPI from '../zendesk-api';
+import ZendeskAPI from '../zendesk-request';
 
 export default class UserAPI extends ZendeskAPI {
   public async create(user: Zendesk.Types.User) {
