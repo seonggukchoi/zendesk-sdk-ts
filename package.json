@@ -4,7 +4,9 @@
   "description": "SDK made by TypeScript for calling easier REST API of Zendesk",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "rm -rf ./dist/; tsc",
+    "lint": "tslint --project .",
+    "lint:fix": "tslint --project . --fix"
   },
   "repository": {
     "type": "git",
@@ -16,7 +18,15 @@
     "url": "https://github.com/seonggukchoi/zendesk-sdk-typescript/issues"
   },
   "homepage": "https://github.com/seonggukchoi/zendesk-sdk-typescript#readme",
+  "dependencies": {
+    "config": "^3.1.0",
+    "request-promise": "^4.2.4",
+    "typescript": "^3.5.2"
+  },
   "devDependencies": {
-    "@types/node": "^12.0.8"
+    "@types/config": "0.0.34",
+    "@types/node": "^12.0.8",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.17.0"
   }
 }
