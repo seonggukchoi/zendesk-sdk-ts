@@ -9,7 +9,11 @@
     "quotemark": [true, "single"],
     "ordered-imports": false,
     "max-classes-per-file": false,
-    "no-console": false
+    "no-console": false,
+    "object-literal-sort-keys": false,
+    "variable-name": false,
+    "max-line-length": false,
+    "no-namespace": false
   },
   "rulesDirectory": []
 }

@@ -1,4 +1,4 @@
-export class Organization implements Zendesk.Types.Organization {
+export class Organization implements Organization.Dto.IOrganizationDto {
   public id?: number;
   public url?: string;
   public external_id?: string;

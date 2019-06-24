@@ -1,45 +1,47 @@
 declare namespace Organization {
-  interface OrganizationData {
-    getId(): any;
-    setId(id?: number): this;
+  namespace Dto {
+    interface IOrganizationDto {
+      getId(): number | undefined;
+      setId(id?: number): this;
 
-    getUrl(): any;
-    setUrl(url?: string): this;
+      getUrl(): string | undefined;
+      setUrl(url?: string): this;
 
-    getExternalId(): any;
-    setExternalId(external_id?: string): this;
+      getExternalId(): string | undefined;
+      setExternalId(external_id?: string): this;
 
-    getName(): any;
-    setName(name: string): this;
+      getName(): string;
+      setName(name: string): this;
 
-    getCreatedAt(): any;
-    setCreatedAt(created_at?: Date | string): this;
+      getCreatedAt(): Date | string | undefined;
+      setCreatedAt(created_at?: Date | string): this;
 
-    getUpdatedAt(): any;
-    setUpdatedAt(updated_at?: Date | string): this;
+      getUpdatedAt(): Date | string | undefined;
+      setUpdatedAt(updated_at?: Date | string): this;
 
-    getDomainNames(): any;
-    setDomainNames(domain_names?: string[]): this;
+      getDomainNames(): string[] | undefined;
+      setDomainNames(domain_names?: string[]): this;
 
-    getDetails(): any;
-    setDetails(details?: string): this;
+      getDetails(): string | undefined;
+      setDetails(details?: string): this;
 
-    getNotes(): any;
-    setNotes(notes?: string): this;
+      getNotes(): string | undefined;
+      setNotes(notes?: string): this;
 
-    getGroupId(): any;
-    setGroupId(group_id?: number): this;
+      getGroupId(): number | undefined;
+      setGroupId(group_id?: number): this;
 
-    getSharedTickets(): any;
-    setSharedTickets(shared_tickets?: boolean): this;
+      getSharedTickets(): boolean | undefined;
+      setSharedTickets(shared_tickets?: boolean): this;
 
-    getSharedComments(): any;
-    setSharedComments(shared_comments?: boolean): this;
+      getSharedComments(): boolean | undefined;
+      setSharedComments(shared_comments?: boolean): this;
 
-    getTags(): any;
-    setTags(tags?: string[]): this;
+      getTags(): string[] | undefined;
+      setTags(tags?: string[]): this;
 
-    getOrganizationFields(): any;
-    setOrganizationFields(organization_fields?: object): this;
+      getOrganizationFields(): object | undefined;
+      setOrganizationFields(organization_fields?: object): this;
+    }
   }
 }

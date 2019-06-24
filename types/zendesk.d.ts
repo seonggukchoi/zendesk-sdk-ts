@@ -1,7 +1,7 @@
 declare namespace Zendesk {
   interface Zendesk {
-    createUserAPI(): User.UserAPI;
-    createOrganizationAPI(): Organization.OrganizationAPI;
-    createOrganizationMembershipAPI(): OrganizationMembership.OrganizationMembershipAPI;
+    createUserAPI(): User.IUserAPI;
+    createOrganizationAPI(): Organization.IOrganizationAPI;
+    createOrganizationMembershipAPI(): OrganizationMembership.IOrganizationMembershipAPI;
   }
 }

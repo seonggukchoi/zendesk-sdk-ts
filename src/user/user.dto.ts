@@ -1,4 +1,4 @@
-export class User implements Zendesk.Types.User {
+export class User implements User.Types.User {
   public id?: number;
   public email?: string;
   public name: string;
@@ -125,7 +125,7 @@ export class User implements Zendesk.Types.User {
   public setTags(tags: string[]) { this.tags = tags; return this; }
 
   public getTicketRestriction() { return this.ticket_restriction; }
-  public setTicketRestriction(ticket_restriction: Zendesk.Types.TicketRestrictionType) { this.ticket_restriction = ticket_restriction; return this; }
+  public setTicketRestriction(ticket_restriction: User.Types.TicketRestrictionType) { this.ticket_restriction = ticket_restriction; return this; }
 
   public getTimeZone() { return this.time_zone; }
   public setTimeZone(time_zone: string) { this.time_zone = time_zone; return this; }
