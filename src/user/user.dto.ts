@@ -1,41 +1,83 @@
-export class User implements User.Types.User {
-  public id?: number;
-  public email?: string;
-  public name: string;
-  public active?: string;
-  public alias?: string;
-  public chat_only?: boolean;
-  public created_at?: Date | string;
-  public custom_role_id?: number;
-  public role_type?: number;
-  public details?: string;
-  public external_id?: string;
-  public last_login_at?: Date | string;
-  public locale?: string;
-  public locale_id?: number;
-  public moderator?: boolean;
-  public notes?: string;
-  public only_private_comments?: string;
-  public organization_id?: number;
-  public default_group_id?: number;
-  public phone?: string;
-  public shared_phone_number?: boolean;
-  public photo?: Zendesk.Types.Attachment;
-  public restricted_agent?: boolean;
-  public role?: Zendesk.Types.UserRoleType;
-  public shared?: boolean;
-  public shared_agent?: boolean;
-  public signature?: string;
-  public suspended?: boolean;
-  public tags?: string[];
-  public ticket_restriction?: Zendesk.Types.TicketRestrictionType;
-  public time_zone?: string;
-  public two_factor_auth_enabled?: boolean;
-  public updated_at?: Date | string;
-  public url?: string;
-  public user_fields?: object;
-  public verified?: boolean;
-  public report_csv?: boolean;
+export default class User implements User.Types.IUserDto {
+  private id?: number;
+  private email?: string;
+  private name: string;
+  private active?: string;
+  private alias?: string;
+  private chat_only?: boolean;
+  private created_at?: Date | string;
+  private custom_role_id?: number;
+  private role_type?: number;
+  private details?: string;
+  private external_id?: string;
+  private last_login_at?: Date | string;
+  private locale?: string;
+  private locale_id?: number;
+  private moderator?: boolean;
+  private notes?: string;
+  private only_private_comments?: string;
+  private organization_id?: number;
+  private default_group_id?: number;
+  private phone?: string;
+  private shared_phone_number?: boolean;
+  private photo?: User.Types.Attachment;
+  private restricted_agent?: boolean;
+  private role?: User.Types.UserRoleType;
+  private shared?: boolean;
+  private shared_agent?: boolean;
+  private signature?: string;
+  private suspended?: boolean;
+  private tags?: string[];
+  private ticket_restriction?: User.Types.TicketRestrictionType;
+  private time_zone?: string;
+  private two_factor_auth_enabled?: boolean;
+  private updated_at?: Date | string;
+  private url?: string;
+  private user_fields?: object;
+  private verified?: boolean;
+  private report_csv?: boolean;
+
+  public build() {
+    return {
+      id: this.getId(),
+      email: this.getEmail(),
+      name: this.getName(),
+      active: this.getActive(),
+      alias: this.getAlias(),
+      chat_only: this.getChatOnly(),
+      created_at: this.getCreatedAt(),
+      custom_role_id: this.getCustomRoleId(),
+      role_type: this.getRoleType(),
+      details: this.getDetails(),
+      external_id: this.getExternalId(),
+      last_login_at: this.getLastLoginAt(),
+      locale: this.getLocale(),
+      locale_id: this.getLocaleId(),
+      moderator: this.getModerator(),
+      notes: this.getNotes(),
+      only_private_comments: this.getOnlyPrivateComments(),
+      organization_id: this.getOrganizationId(),
+      default_group_id: this.getDefaultGroupId(),
+      phone: this.getPhone(),
+      shared_phone_number: this.getSharedPhoneNumber(),
+      photo: this.getPhoto(),
+      restricted_agent: this.getRestrictedAgent(),
+      role: this.getRole(),
+      shared: this.getShared(),
+      shared_agent: this.getShared_agent(),
+      signature: this.getSignature(),
+      suspended: this.getSuspended(),
+      tags: this.getTags(),
+      ticket_restriction: this.getTicketRestriction(),
+      time_zone: this.getTimeZone(),
+      two_factor_auth_enabled: this.getTwoFactorAuthEnabled(),
+      updated_at: this.getUpdatedAt(),
+      url: this.getUrl(),
+      user_fields: this.getUserFields(),
+      verified: this.getVerified(),
+      report_csv: this.getReportCsv(),
+    };
+  }
 
   public getId() { return this.id; }
   public setId(id?: number) { this.id = id; return this; }
@@ -101,13 +143,13 @@ export class User implements User.Types.User {
   public setSharedPhoneNumber(shared_phone_number: boolean) { this.shared_phone_number = shared_phone_number; return this; }
 
   public getPhoto() { return this.photo; }
-  public setPhoto(photo: Zendesk.Types.Attachment) { this.photo = photo; return this; }
+  public setPhoto(photo: User.Types.Attachment) { this.photo = photo; return this; }
 
   public getRestrictedAgent() { return this.restricted_agent; }
   public setRestrictedAgent(restricted_agent: boolean) { this.restricted_agent = restricted_agent; return this; }
 
   public getRole() { return this.role; }
-  public setRole(role: Zendesk.Types.UserRoleType) { this.role = role; return this; }
+  public setRole(role: User.Types.UserRoleType) { this.role = role; return this; }
 
   public getShared() { return this.shared; }
   public setShared(shared: boolean) { this.shared = shared; return this; }

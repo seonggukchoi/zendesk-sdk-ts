@@ -13,7 +13,8 @@
     "object-literal-sort-keys": false,
     "variable-name": false,
     "max-line-length": false,
-    "no-namespace": false
+    "no-namespace": false,
+    "arrow-parens": false
   },
   "rulesDirectory": []
 }

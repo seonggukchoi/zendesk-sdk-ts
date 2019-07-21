@@ -1,18 +1,37 @@
-export class Organization implements Organization.Dto.IOrganizationDto {
-  public id?: number;
-  public url?: string;
-  public external_id?: string;
-  public name: string;
-  public created_at?: Date | string;
-  public updated_at?: Date | string;
-  public domain_names?: string[];
-  public details?: string;
-  public notes?: string;
-  public group_id?: number;
-  public shared_tickets?: boolean;
-  public shared_comments?: boolean;
-  public tags?: string[];
-  public organization_fields?: object;
+export default class Organization implements Organization.Types.IOrganizationDto {
+  private id?: number;
+  private url?: string;
+  private external_id?: string;
+  private name: string;
+  private created_at?: Date | string;
+  private updated_at?: Date | string;
+  private domain_names?: string[];
+  private details?: string;
+  private notes?: string;
+  private group_id?: number;
+  private shared_tickets?: boolean;
+  private shared_comments?: boolean;
+  private tags?: string[];
+  private organization_fields?: object;
+
+  public build() {
+    return {
+      id: this.getId(),
+      url: this.getUrl(),
+      external_id: this.getExternalId(),
+      name: this.getName(),
+      created_at: this.getCreatedAt(),
+      updated_at: this.getUpdatedAt(),
+      domain_names: this.getDomainNames(),
+      details: this.getDetails(),
+      notes: this.getNotes(),
+      group_id: this.getGroupId(),
+      shared_tickets: this.getSharedTickets(),
+      shared_comments: this.getSharedComments(),
+      tags: this.getTags(),
+      organization_fields: this.getOrganizationFields(),
+    };
+  }
 
   public getId() { return this.id; }
   public setId(id?: number) { this.id = id; return this; }

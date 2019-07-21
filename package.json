@@ -6,7 +6,8 @@
   "scripts": {
     "build": "rm -rf ./dist/; tsc",
     "lint": "tslint --project .",
-    "lint:fix": "tslint --project . --fix"
+    "lint:fix": "tslint --project . --fix",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/seonggukchoi/zendesk-sdk-typescript#readme",
   "dependencies": {
     "config": "^3.1.0",
+    "jest-extended": "^0.11.2",
     "request-promise": "^4.2.4",
     "typescript": "^3.5.2"
   },

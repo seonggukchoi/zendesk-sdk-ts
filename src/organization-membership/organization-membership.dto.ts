@@ -1,11 +1,23 @@
-export class OrganizationMembership implements OrganizationMembership {
-  public id?: number;
-  public url?: string;
-  public user_id: number;
-  public organization_id: number;
-  public default: boolean;
-  public created_at?: Date | string;
-  public updated_at?: Date | string;
+export default class OrganizationMembership implements OrganizationMembership.Types.IOrganizationMembershipDto {
+  private id?: number;
+  private url?: string;
+  private user_id: number;
+  private organization_id: number;
+  private default: boolean;
+  private created_at?: Date | string;
+  private updated_at?: Date | string;
+
+  public build() {
+    return {
+      id: this.getId(),
+      url: this.getUrl(),
+      user_id: this.getUserId(),
+      organization_id: this.getOrganizationId(),
+      default: this.getDefault(),
+      created_at: this.getCreatedAt(),
+      updated_at: this.getUpdatedAt(),
+    };
+  }
 
   public getId() { return this.id; }
   public setId(id?: number) { this.id = id; return this; }

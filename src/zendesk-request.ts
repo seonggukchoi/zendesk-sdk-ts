@@ -2,7 +2,7 @@ import * as request from 'request-promise';
 
 import ZendeskError from '@/exceptions/zendesk-error';
 
-export abstract class ZendeskRequest implements ZendeskRequest.ZendeskRequest {
+export default abstract class ZendeskRequest implements ZendeskRequest.ZendeskRequest {
   protected request = request.defaults({});
   private apiKey: string;
   private endpoint: string;
