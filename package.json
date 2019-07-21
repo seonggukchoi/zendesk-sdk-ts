@@ -21,14 +21,16 @@
   "homepage": "https://github.com/seonggukchoi/zendesk-sdk-typescript#readme",
   "dependencies": {
     "config": "^3.1.0",
-    "jest-extended": "^0.11.2",
     "request-promise": "^4.2.4",
     "typescript": "^3.5.2"
   },
   "devDependencies": {
     "@types/config": "0.0.34",
+    "@types/jest": "^24.0.15",
     "@types/node": "^12.0.8",
     "@types/request-promise": "^4.1.44",
+    "jest": "^24.8.0",
+    "jest-extended": "^0.11.2",
     "ts-node": "^8.3.0",
     "tslint": "^5.17.0"
   }
