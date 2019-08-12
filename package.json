@@ -1,7 +1,8 @@
 {
-  "name": "zendesk-sdk-typescript",
+  "name": "zendesk-sdk-ts",
   "version": "1.0.0",
   "description": "SDK made by TypeScript for calling easier REST API of Zendesk",
+  "keywords": ["zendesk", "typescript", "ts", "sdk"],
   "main": "./dist/index.js",
   "scripts": {
     "build": "rm -rf ./dist/; tsc",
@@ -11,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seonggukchoi/zendesk-sdk-typescript.git"
+    "url": "git+https://github.com/seonggukchoi/zendesk-sdk-ts.git"
   },
   "author": "seonggukchoi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/seonggukchoi/zendesk-sdk-typescript/issues"
+    "url": "https://github.com/seonggukchoi/zendesk-sdk-ts/issues"
   },
-  "homepage": "https://github.com/seonggukchoi/zendesk-sdk-typescript#readme",
+  "homepage": "https://github.com/seonggukchoi/zendesk-sdk-ts#readme",
   "dependencies": {
     "config": "^3.1.0",
     "request-promise": "^4.2.4",
