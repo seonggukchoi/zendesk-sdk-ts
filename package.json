@@ -1,6 +1,6 @@
 {
   "name": "zendesk-sdk-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SDK made by TypeScript for calling easier REST API of Zendesk",
   "keywords": ["zendesk", "typescript", "ts", "sdk"],
   "main": "./dist/index.js",
